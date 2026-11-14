@@ -20,6 +20,25 @@ config/icon="res://icon.svg"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[input]
+
+w={
+"deadzone": 0.5,
+"events": []
+}
+s={
+"deadzone": 0.5,
+"events": []
+}
+a={
+"deadzone": 0.5,
+"events": []
+}
+d={
+"deadzone": 0.5,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
