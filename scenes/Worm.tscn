@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ikok8un0sbxk"]
+
+[node name="Worm" type="CharacterBody2D" unique_id=579398618]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2044702436]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851285348]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=233501438]

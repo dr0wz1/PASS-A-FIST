@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://cnwags0jlddv7"]
 
 [ext_resource type="PackedScene" uid="uid://bfapp6j1rb31g" path="res://scenes/player.tscn" id="1_mlo68"]
+[ext_resource type="PackedScene" uid="uid://j708curb3eyg" path="res://scenes/Box.tscn" id="2_otlwi"]
 
 [node name="pass-a-fist" type="Node2D" unique_id=549767905]
 
 [node name="player" parent="." unique_id=1669892106 instance=ExtResource("1_mlo68")]
+
+[node name="Box" parent="." unique_id=1274576008 instance=ExtResource("2_otlwi")]
+position = Vector2(83, 2)
+scale = Vector2(0.08682879, 0.090710185)
