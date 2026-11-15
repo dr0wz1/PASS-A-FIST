@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	
 	
 	if velocity.y < 0:
-		$AnimatedSprite2D.play("running")		
+		$AnimatedSprite2D.play("running")
 	elif direction != Vector2.ZERO:
 		$AnimatedSprite2D.play("running")
 	else:
