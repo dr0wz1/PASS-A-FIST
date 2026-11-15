@@ -3,14 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://bfapp6j1rb31g" path="res://scenes/player.tscn" id="1_mlo68"]
 [ext_resource type="PackedScene" uid="uid://j708curb3eyg" path="res://scenes/Box.tscn" id="2_otlwi"]
 [ext_resource type="PackedScene" uid="uid://ikok8un0sbxk" path="res://scenes/Worm.tscn" id="3_l1jwy"]
+[ext_resource type="PackedScene" uid="uid://bgahrc4f2iees" path="res://scenes/Projectile.tscn" id="4_87ug2"]
 
 [node name="pass-a-fist" type="Node2D" unique_id=549767905]
 
 [node name="player" parent="." unique_id=1669892106 instance=ExtResource("1_mlo68")]
+position = Vector2(-105, 9)
 
 [node name="Box" parent="." unique_id=1274576008 instance=ExtResource("2_otlwi")]
 position = Vector2(113, 1)
 scale = Vector2(0.08682879, 0.090710185)
 
 [node name="Worm" parent="." unique_id=579398618 instance=ExtResource("3_l1jwy")]
-position = Vector2(194, -137)
+position = Vector2(183, -81)
+
+[node name="Projectile" parent="." unique_id=472902243 instance=ExtResource("4_87ug2")]
+position = Vector2(-102.000015, -71)
+scale = Vector2(0.16275048, 0.29226917)
