@@ -73,3 +73,5 @@ sprite_frames = SubResource("SpriteFrames_pc1sa")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.88686174
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_detection_area_body_entered"]
