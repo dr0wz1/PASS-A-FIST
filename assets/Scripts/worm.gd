@@ -19,12 +19,8 @@ func _physics_process(delta: float) -> void:
 
 func shoot() -> void:
 	if projectile_scene and player:
-		# 1. Buat salinan peluru baru
 		var bullet = projectile_scene.instantiate()
-		# 2. Masukkan peluru ke dalam scene utama (bukan ke dalam musuh agar tidak ikut bergerak)
-		# 3. Posisikan peluru di ujung senjata (Muzzle)
 		bullet.global_position = muzzle.global_position
-		# 4. Arahkan peluru menuju posisi pemain
 		bullet.direction = muzzle.global_position.direction_to(player.global_position)
 		bullet.rotation = bullet.direction.angle()
 		get_tree().current_scene.add_child(bullet)
@@ -37,13 +33,13 @@ func _on_shoot_timer_timeout() -> void:
 func _on_detection_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
-		shoot_timer.start() # Mulai menembak saat pemain terlihat
+		shoot_timer.start()
 
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == player:
 		player = null
-		shoot_timer.stop() # Berhenti menembak saat pemain kabur
+		shoot_timer.stop() 
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	pass
