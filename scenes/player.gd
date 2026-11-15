@@ -15,14 +15,6 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("running")
 	elif direction.x == 0:
 		$AnimatedSprite2D.play("idle")
-	if direction.y > 0:
-		$AnimatedSprite2D.flip_h = false
-		$AnimatedSprite2D.play("running")
-	elif direction.y < 0:
-		$AnimatedSprite2D.flip_h = true
-		$AnimatedSprite2D.play("running")
-	elif direction.y == 0:
-		$AnimatedSprite2D.play("idle")
 
 
 
