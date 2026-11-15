@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dpx3gwbwkexnl" path="res://assets/Scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://plunw78euud8" path="res://icon.svg" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://cu4qqbr16ne3x" path="res://assets/Spritesheets/Seeker_Void_Run_30x30_10f.png" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://dd4ovnb4u7t8f" path="res://scenes/shield_pivot.gd" id="3_qlg0r"]
+[ext_resource type="Script" uid="uid://dd4ovnb4u7t8f" path="res://assets/Scripts/shield_pivot.gd" id="3_qlg0r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2els"]
 load_path = "res://.godot/imported/Seeker_Void_Idle_30x30_24f.png-a1af5328b8522ec6c7c3e54c33bf393e.ctex"
@@ -333,6 +333,9 @@ animations = [{
 radius = 4.0
 height = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4i2a"]
+size = Vector2(42, 4)
+
 [node name="player" type="CharacterBody2D" unique_id=1669892106 groups=["player"]]
 script = ExtResource("1_g2els")
 metadata/player = false
@@ -353,7 +356,7 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="shield_pivot" type="Node2D" parent="." unique_id=1877026973]
+[node name="shield_pivot" type="Node2D" parent="." unique_id=1877026973 groups=["shield"]]
 position = Vector2(0, -11)
 script = ExtResource("3_qlg0r")
 
@@ -361,3 +364,11 @@ script = ExtResource("3_qlg0r")
 position = Vector2(0, 17)
 scale = Vector2(0.34570313, 0.042968757)
 texture = ExtResource("3_dqkch")
+
+[node name="Area2D" type="Area2D" parent="shield_pivot" unique_id=1353066839 groups=["shield"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shield_pivot/Area2D" unique_id=1963915102 groups=["shield"]]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_x4i2a")
+
+[connection signal="area_entered" from="shield_pivot/Area2D" to="shield_pivot" method="_on_area_2d_area_entered"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 150.0
-@export var projectile_scene: PackedScene # Slot untuk memasukkan file projectile.tscn
+var speed: float = 70.0
+@export var projectile_scene: PackedScene# Slot untuk memasukkan file projectile.tscn
 
 var player: Node2D = null
 
@@ -22,12 +22,13 @@ func shoot() -> void:
 		# 1. Buat salinan peluru baru
 		var bullet = projectile_scene.instantiate()
 		# 2. Masukkan peluru ke dalam scene utama (bukan ke dalam musuh agar tidak ikut bergerak)
-		get_tree().current_scene.add_child(bullet)
 		# 3. Posisikan peluru di ujung senjata (Muzzle)
 		bullet.global_position = muzzle.global_position
 		# 4. Arahkan peluru menuju posisi pemain
 		bullet.direction = muzzle.global_position.direction_to(player.global_position)
 		bullet.rotation = bullet.direction.angle()
+		get_tree().current_scene.add_child(bullet)
+
 
 # Hubungkan sinyal timeout dari ShootTimer ke fungsi ini
 func _on_shoot_timer_timeout() -> void:
