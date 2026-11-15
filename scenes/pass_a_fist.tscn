@@ -9,8 +9,8 @@
 [node name="player" parent="." unique_id=1669892106 instance=ExtResource("1_mlo68")]
 
 [node name="Box" parent="." unique_id=1274576008 instance=ExtResource("2_otlwi")]
-position = Vector2(116.99999, 0)
+position = Vector2(113, 1)
 scale = Vector2(0.08682879, 0.090710185)
 
 [node name="Worm" parent="." unique_id=579398618 instance=ExtResource("3_l1jwy")]
-position = Vector2(46, -41)
+position = Vector2(194, -137)
