@@ -9,7 +9,11 @@ func _process(delta: float) -> void:
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	
-	if velocity.y < 0:
+	if direction.x > 0:
+		$AnimatedSprite2D.flip_h = false
+		$AnimatedSprite2D.play("running")
+	elif direction.x < 0:
+		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("running")
 	elif direction != Vector2.ZERO:
 		$AnimatedSprite2D.play("running")
