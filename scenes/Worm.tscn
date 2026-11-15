@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bh04pmm7iq8f2" path="res://assets/craftpix-net-556605-free-zombie-sprite-sheet-pack-pixel-art/Zombie Woman/Idle.png" id="1_hqsf1"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7x8hf"]
+height = 66.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2s8qi"]
 atlas = ExtResource("1_hqsf1")
 region = Rect2(0, 0, 96, 96)
@@ -48,10 +51,13 @@ animations = [{
 [node name="Worm" type="CharacterBody2D" unique_id=579398618]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851285348]
+position = Vector2(-1, -3)
+shape = SubResource("CapsuleShape2D_7x8hf")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=233501438]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1545463506]
+position = Vector2(2, -19)
 sprite_frames = SubResource("SpriteFrames_pc1sa")
 animation = &"idle"
 autoplay = "idle"

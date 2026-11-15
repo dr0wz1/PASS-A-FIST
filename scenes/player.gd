@@ -15,8 +15,12 @@ func _process(delta: float) -> void:
 	elif direction.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("running")
-	elif direction.x == 0:
+	elif direction != Vector2.ZERO:
+		$AnimatedSprite2D.play("running")
+	else:
 		$AnimatedSprite2D.play("idle")
+		
+		
 
 
 
