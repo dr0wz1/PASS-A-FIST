@@ -74,4 +74,10 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.88686174
 
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1368061818]
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=904917450]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

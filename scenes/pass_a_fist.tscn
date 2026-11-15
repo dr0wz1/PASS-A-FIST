@@ -18,5 +18,5 @@ scale = Vector2(0.08682879, 0.090710185)
 position = Vector2(183, -81)
 
 [node name="Projectile" parent="." unique_id=472902243 instance=ExtResource("4_87ug2")]
-position = Vector2(-102.000015, -71)
+position = Vector2(-292, 0)
 scale = Vector2(0.16275048, 0.29226917)
