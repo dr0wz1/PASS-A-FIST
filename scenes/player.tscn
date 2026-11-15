@@ -333,6 +333,9 @@ animations = [{
 radius = 4.0
 height = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4i2a"]
+size = Vector2(44, 5)
+
 [node name="player" type="CharacterBody2D" unique_id=1669892106]
 script = ExtResource("1_g2els")
 
@@ -360,3 +363,10 @@ script = ExtResource("3_qlg0r")
 position = Vector2(0, 17)
 scale = Vector2(0.34570313, 0.042968757)
 texture = ExtResource("3_dqkch")
+
+[node name="Area2D" type="Area2D" parent="shield_pivot" unique_id=192292860]
+disable_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shield_pivot/Area2D" unique_id=1717670850]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_x4i2a")
