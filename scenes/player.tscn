@@ -333,11 +333,16 @@ animations = [{
 radius = 4.0
 height = 16.0
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4i2a"]
 size = Vector2(44, 5)
 
 [node name="player" type="CharacterBody2D" unique_id=1669892106]
+=======
+[node name="player" type="CharacterBody2D" unique_id=1669892106 groups=["player"]]
+>>>>>>> 59382ffdca216cb50fa08ed1e7e6c9d242399717
 script = ExtResource("1_g2els")
+metadata/player = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1886386714]
 position = Vector2(0, -14)
