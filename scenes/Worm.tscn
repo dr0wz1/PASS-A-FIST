@@ -1,9 +1,58 @@
 [gd_scene format=3 uid="uid://ikok8un0sbxk"]
 
-[node name="Worm" type="CharacterBody2D" unique_id=579398618]
+[ext_resource type="Texture2D" uid="uid://bh04pmm7iq8f2" path="res://assets/craftpix-net-556605-free-zombie-sprite-sheet-pack-pixel-art/Zombie Woman/Idle.png" id="1_hqsf1"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2044702436]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s8qi"]
+atlas = ExtResource("1_hqsf1")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vv4n"]
+atlas = ExtResource("1_hqsf1")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orl7b"]
+atlas = ExtResource("1_hqsf1")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxeb4"]
+atlas = ExtResource("1_hqsf1")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ctkg"]
+atlas = ExtResource("1_hqsf1")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pc1sa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s8qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vv4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orl7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxeb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ctkg")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Worm" type="CharacterBody2D" unique_id=579398618]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851285348]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=233501438]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1545463506]
+sprite_frames = SubResource("SpriteFrames_pc1sa")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.88686174

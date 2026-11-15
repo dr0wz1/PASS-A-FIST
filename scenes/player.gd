@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
-var animated_sprite = AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 100.0
 
 func _process(delta: float) -> void:
 	
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	
 	if direction.x > 0:
 		$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.play("running")
@@ -19,5 +21,4 @@ func _process(delta: float) -> void:
 
 
 	velocity = direction * SPEED
-
 	move_and_slide()
